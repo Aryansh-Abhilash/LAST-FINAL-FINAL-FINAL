@@ -1,0 +1,431 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f9f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Global Styling */
+h1, h2, h3 {
+    color: #023047;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    animation: textAnimation 2s ease-out;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    position: relative;
+    margin-top: 1rem;
+    color: #ffb703;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: #023047;
+}
+
+/* Hero Section (Homepage) */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #219ebc;
+    color: #fff;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content {
+    max-width: 50%;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ffb703;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content .btn {
+    padding: 12px 25px;
+    background-color: #ffb703;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: #fb8500;
+    transform: scale(1.05);
+}
+
+/* Feature Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 2rem;
+    gap: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInUp 1s ease-out;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: #023047;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Navigation Bar */
+header {
+    background: #023047;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: #023047;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 85px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffb703;
+    transform: scale(1.05);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffb703;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Team Name - Nextgen Neurons */
+.team-name {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffb703;
+    text-align: center;
+    animation: glowText 1.5s infinite alternate;
+    letter-spacing: 2px;
+}
+
+.team-name span {
+    color: #023047;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.team-name:hover {
+    transform: scale(1.1);
+    animation: glowTextHover 1.5s ease-out infinite alternate;
+}
+
+/* Add a smooth scrolling effect when navigating */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Content Section */
+section.content {
+    padding: 2rem;
+    margin: 2rem 0;
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    color: #023047;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #023047;
+}
+
+.content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Form Styling (App) */
+.app-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out;
+}
+
+h1 {
+    text-align: center;
+    color: #023047;
+    margin-bottom: 1.5rem;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.symptoms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.symptoms-grid label {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #219ebc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #126782;
+    transform: scale(1.05);
+}
+
+/* Result Box */
+.result-box {
+    background: #e9f5f5;
+    border-left: 5px solid #219ebc;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textAnimation {
+    0% { color: #ffb703; }
+    50% { color: #ff8500; }
+    100% { color: #219ebc; }
+}
+
+@keyframes glowText {
+    0% {
+        text-shadow: 0 0 5px #ffb703, 0 0 10px #ffb703, 0 0 15px #ffb703;
+    }
+    100% {
+        text-shadow: 0 0 10px #ffb703, 0 0 20px #ffb703, 0 0 30px #ffb703;
+    }
+}
+
+@keyframes glowTextHover {
+    0% {
+        text-shadow: 0 0 10px #ffb703, 0 0 20px #ffb703, 0 0 30px #ffb703;
+    }
+    100% {
+        text-shadow: 0 0 15px #ffb703, 0 0 25px #ffb703, 0 0 40px #ffb703;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #023047;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 80%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .symptoms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}

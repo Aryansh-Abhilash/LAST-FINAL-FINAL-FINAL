@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Symptom Tracker - Nextgen Neurons</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+<header>
+    <nav>
+        <div class="logo">
+            <img src="Logo.webp" alt="Nextgen Neurons Logo" class="logo-img">
+            <span>Nextgen Neurons</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="app.html" class="active">Symptom Tracker</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="app-container fade-in">
+    <h1>Parkinson's Symptom Tracker</h1>
+    <form id="symptom-form">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required min="1" max="120">
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <h3>Select Symptoms:</h3>
+        <div class="symptoms-grid">
+            <label><input type="checkbox" name="symptom" value="tremor"> Tremors</label>
+            <label><input type="checkbox" name="symptom" value="slowness"> Slowness of Movement</label>
+            <label><input type="checkbox" name="symptom" value="rigid"> Muscle Rigidity</label>
+            <label><input type="checkbox" name="symptom" value="balance"> Balance Problems</label>
+            <label><input type="checkbox" name="symptom" value="speech"> Speech Changes</label>
+            <label><input type="checkbox" name="symptom" value="writing"> Handwriting Changes</label>
+            <label><input type="checkbox" name="symptom" value="face"> Reduced Facial Expressions</label>
+            <label><input type="checkbox" name="symptom" value="sleep"> Sleep Disturbances</label>
+        </div>
+
+        <button type="submit" class="btn">Analyze Symptoms</button>
+    </form>
+
+    <div id="result" class="result-box fade-in hidden"></div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Nextgen Neurons. All rights reserved.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
